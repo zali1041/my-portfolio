@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zeeshan Ali — AI Data Specialist | LLM Evaluator | Mathematics & Data Annotation Expert" />
+  <title>Zeeshan Ali | AI Data Specialist</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zeeshan Ali | AI Data Specialist" />
+  <meta property="og:description" content="LLM evaluation, multi-modal data annotation, multilingual prompting (Urdu/Sindhi), STEM prompt design (Python)." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#111827; --muted:#9ca3af; --text:#e5e7eb;
+      --accent:#60a5fa; --accent2:#34d399; --border:#1f2937;
+      --shadow: 0 12px 28px rgba(0,0,0,.35);
+      --max: 1050px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;}
+    body{background: radial-gradient(1200px 600px at 10% 0%, rgba(96,165,250,.18), transparent 60%),
+                   radial-gradient(900px 500px at 90% 10%, rgba(52,211,153,.14), transparent 55%),
+                   var(--bg);
+         color:var(--text); line-height:1.6}
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.7);
+      border-bottom:1px solid rgba(31,41,55,.7);
+    }
+    .topbar-inner{max-width:var(--max); margin:0 auto; padding:12px 18px; display:flex; align-items:center; gap:14px; justify-content:space-between}
+    .brand{display:flex; gap:10px; align-items:center; min-width:220px}
+    .dot{width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow:0 0 0 4px rgba(96,165,250,.12)}
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+    nav{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end}
+    nav a{
+      text-decoration:none; font-size:13px; color:var(--muted);
+      padding:7px 10px; border-radius:10px; border:1px solid transparent;
+    }
+    nav a:hover{color:var(--text); border-color:rgba(96,165,250,.35); background:rgba(17,24,39,.55)}
+    .hero{padding:26px 0 10px; display:grid; grid-template-columns: 1.3fr .7fr; gap:16px}
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr} nav{justify-content:flex-start}}
+    .card{
+      background: linear-gradient(180deg, rgba(17,24,39,.96), rgba(17,24,39,.88));
+      border:1px solid rgba(31,41,55,.9);
+      border-radius:18px;
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:22px}
+    .kicker{display:inline-flex; gap:8px; align-items:center; color:var(--muted); font-size:13px}
+    .pill{font-size:12px; color:rgba(229,231,235,.9); border:1px solid rgba(96,165,250,.35); background:rgba(96,165,250,.10); padding:4px 10px; border-radius:999px}
+    h1{margin:10px 0 6px; font-size:34px; line-height:1.2}
+    .subtitle{margin:0; color:var(--muted); font-size:15px}
+    .cta{margin-top:16px; display:flex; flex-wrap:wrap; gap:10px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      text-decoration:none; font-weight:600; font-size:13px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(31,41,55,.9);
+      background: rgba(17,24,39,.6);
+      color:var(--text);
+    }
+    .btn.primary{
+      border-color: rgba(96,165,250,.55);
+      background: linear-gradient(135deg, rgba(96,165,250,.25), rgba(52,211,153,.18));
+    }
+    .btn:hover{transform: translateY(-1px); transition: .15s ease; border-color:rgba(156,163,175,.45)}
+    .hero-right{padding:18px; display:grid; gap:10px}
+    .mini{padding:14px}
+    .mini h3{margin:0 0 8px; font-size:13px; color:rgba(229,231,235,.92)}
+    .mini p{margin:0; color:var(--muted); font-size:13px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr}}
+    section{margin-top:16px}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
+      padding:16px 18px 0;
+    }
+    .section-title h2{margin:0; font-size:16px}
+    .section-title span{color:var(--muted); font-size:12px}
+    .section-body{padding:10px 18px 18px}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      font-size:12px; color:rgba(229,231,235,.92);
+      border:1px solid rgba(31,41,55,.95);
+      background: rgba(11,15,23,.35);
+      padding:6px 10px; border-radius:999px;
+    }
+    .timeline{display:grid; gap:10px}
+    .item{
+      border:1px solid rgba(31,41,55,.95);
+      background: rgba(11,15,23,.35);
+      border-radius:16px;
+      padding:14px 14px;
+    }
+    .item-top{display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; justify-content:space-between}
+    .item h3{margin:0; font-size:14px}
+    .meta{color:var(--muted); font-size:12px}
+    ul{margin:10px 0 0 18px; color:rgba(229,231,235,.92)}
+    li{margin:6px 0}
+    .footer{margin-top:20px; padding:14px 18px; color:var(--muted); font-size:12px}
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media (max-width: 860px){ .split{grid-template-columns:1fr}}
+    .contact-list{display:grid; gap:8px; margin-top:10px}
+    .contact-list a{color:var(--text); text-decoration:none}
+    .contact-list a:hover{color:var(--accent)}
+    .hr{height:1px; background:rgba(31,41,55,.9); margin:12px 0}
+    code.kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: rgba(0,0,0,.25); padding:2px 6px; border-radius:8px; border:1px solid rgba(31,41,55,.9); color:rgba(229,231,235,.95)}
+  </style>
+
+  <!-- JSON-LD (basic) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zeeshan Ali",
+    "jobTitle": "AI Data Specialist | LLM Evaluator | Mathematics & Data Annotation Expert",
+    "address": { "@type": "PostalAddress", "addressCountry": "Pakistan" },
+    "email": "za17787@gmail.com",
+    "telephone": "+92 345 124 6218",
+    "sameAs": [
+      "https://linkedin.com/in/zeeshan-ali-9503741a0"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Site identity">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <strong>Zeeshan Ali</strong>
+          <span>AI Data Specialist • LLM Evaluator • Mathematics</span>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Highlights</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" itemscope itemtype="https://schema.org/Person">
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="kicker">
+          <span class="pill">Open to remote AI projects</span>
+          <span class="pill">Multi-modal • Urdu/Sindhi • STEM</span>
+        </div>
+
+        <h1 itemprop="name">Zeeshan Ali</h1>
+        <p class="subtitle" itemprop="jobTitle">
+          AI Data Specialist | LLM Evaluator | Mathematics & Data Annotation Expert
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact" aria-label="Jump to contact section">Contact</a>
+          <a class="btn" href="assets/Zeeshan_Ali_CV_AI_Data_Specialist.pdf" target="_blank" rel="noreferrer">
+            Download CV (PDF)
+          </a>
+          <a class="btn" href="https://linkedin.com/in/zeeshan-ali-9503741a0" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="hr"></div>
+
+        <section id="about" aria-label="Professional summary">
+          <h2 style="margin:0 0 8px; font-size:16px;">Professional Summary</h2>
+          <p style="margin:0; color:rgba(229,231,235,.92);">
+            AI Evaluation and Data Annotation specialist with multi-year experience across global projects involving
+            LLM evaluation, side-by-side (SxS) comparison, and quality auditing of model responses.
+            Experienced across text, image, audio, and video pipelines: image annotation and image–prompt alignment,
+            English audio transcription/segmentation, and multi-modal response rating for correctness, coherence,
+            safety, and alignment. Strong background in multilingual prompting and script validation (Urdu/Sindhi),
+            document and “journalistic-style” article evaluation (relevance, trustworthiness, bias, freshness),
+            and computational STEM prompt design requiring Python-based solutions.
+          </p>
+
+          <div class="tags" aria-label="Core focus areas">
+            <span class="tag">LLM evaluation (SxS, rubrics, safety)</span>
+            <span class="tag">Multi-modal annotation (text/image/audio/video)</span>
+            <span class="tag">Multilingual prompting (Urdu/Sindhi)</span>
+            <span class="tag">Script & transliteration QA</span>
+            <span class="tag">STEM prompt engineering (Python)</span>
+            <span class="tag">High-precision numerical reasoning</span>
+          </div>
+        </section>
+      </div>
+
+      <aside class="card hero-right" aria-label="Quick facts">
+        <div class="mini card">
+          <h3>Location</h3>
+          <p>Pakistan • Remote</p>
+        </div>
+        <div class="mini card">
+          <h3>Contact</h3>
+          <p>
+            +92 345 124 6218<br />
+            <a href="mailto:za17787@gmail.com">za17787@gmail.com</a>
+          </p>
+        </div>
+        <div class="mini card">
+          <h3>Tooling</h3>
+          <p>Python • C++ • MATLAB • Spreadsheets • JSON/CSV</p>
+        </div>
+        <div class="mini card">
+          <h3>Languages</h3>
+          <p>English (C1) • Urdu (Native) • Punjabi (Native)</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="grid">
+      <section id="skills" class="card" aria-label="Skills">
+        <div class="section-title">
+          <h2>Core Skills & Keywords</h2>
+          <span>What I do best</span>
+        </div>
+        <div class="section-body">
+          <div class="timeline">
+            <div class="item">
+              <div class="item-top">
+                <h3>LLM & AI Evaluation</h3>
+                <span class="meta">SxS comparison • rubric scoring • safety checks</span>
+              </div>
+              <ul>
+                <li>Side-by-side preference ranking and rubric-based quality scoring (helpfulness, accuracy, clarity).</li>
+                <li>Safety & containment checks (detecting policy issues and leakage patterns).</li>
+                <li>Structured rationales and QA feedback for training and safety teams.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Multi-modal Data Annotation</h3>
+                <span class="meta">text • image • audio • video</span>
+              </div>
+              <ul>
+                <li>Image tagging, object labeling, and image–prompt alignment verification.</li>
+                <li>English audio transcription, segmentation, and speaker diarization/alignment.</li>
+                <li>Video-grounded Q&A creation using both visual and audio cues.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Multilingual Prompting & Script Review</h3>
+                <span class="meta">Urdu • Sindhi • phonological match</span>
+              </div>
+              <ul>
+                <li>Urdu prompt creation grounded in Pakistani culture, geography, and everyday contexts.</li>
+                <li>Native-script vs Latin transliteration review for correctness, spelling, and contextual fit.</li>
+                <li>Ensuring cultural and religious appropriateness in multilingual data pipelines.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>STEM & Programming</h3>
+                <span class="meta">Mathematics • Python solutions • precision</span>
+              </div>
+              <ul>
+                <li>Designing computational STEM tasks that require deterministic Python solutions.</li>
+                <li>Numerical methods, statistics, linear algebra, calculus, and rigorous reasoning workflows.</li>
+                <li>Working comfortably with JSON/CSV, spreadsheets, and evaluation metadata.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="card" aria-label="Professional experience">
+        <div class="section-title">
+          <h2>Professional Experience</h2>
+          <span>Selected roles</span>
+        </div>
+        <div class="section-body">
+          <div class="timeline">
+            <div class="item">
+              <div class="item-top">
+                <h3>AI Data Specialist — Pareto.ai (Remote)</h3>
+                <span class="meta">Aug 2025 – Present</span>
+              </div>
+              <ul>
+                <li>Transcribe proof-based mathematical material into standalone, AI-trainable question formats with structured metadata.</li>
+                <li>Develop step-by-step solutions while preserving rigor and educational clarity.</li>
+                <li>Convert advanced problems into simplified training examples for AI/learning platforms.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>AI Data Labeler & LLM Evaluator — Turing (Remote)</h3>
+                <span class="meta">Dec 2025 – Present</span>
+              </div>
+              <ul>
+                <li>Conduct side-by-side evaluations of LLM outputs: containment + overall response quality.</li>
+                <li>Detect internal monologue/system-command leakage and classify severity with clear justification.</li>
+                <li>Report recurring failure patterns and edge cases aligned with project rubrics.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>LLM Trainer & Response Evaluator — Mindrift.ai (Remote)</h3>
+                <span class="meta">Mar 2025 – Present</span>
+              </div>
+              <ul>
+                <li>Annotation and evaluation across text, audio, image, and video pipelines.</li>
+                <li>Rubric-based scoring for correctness, fluency, safety, fairness, and reasoning quality.</li>
+                <li>TTS comparisons: label artifacts, mismatches, and quality differences.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Data Annotator & NLP Prompt Specialist — OneForma (Remote)</h3>
+                <span class="meta">Dec 2024 – Present</span>
+              </div>
+              <ul>
+                <li>English audio segmentation/transcription including speaker diarization.</li>
+                <li>Create Urdu prompts enriched with Pakistani culture and everyday scenarios.</li>
+                <li>Validate image–prompt pairs for realism, safety, and location consistency; perform object tagging.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>LLM Evaluator — Appen (Remote)</h3>
+                <span class="meta">Oct 2024 – Present</span>
+              </div>
+              <ul>
+                <li>Evaluate LLM outputs for correctness, relevance, fluency, and safety using project rubrics.</li>
+                <li>Pairwise ranking across candidate responses; annotate fine-grained error categories.</li>
+                <li>Compare human vs AI content to detect unnatural behavior, bias, and policy violations.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Document Relevance & Quality Rater (Remote)</h3>
+                <span class="meta">May 2025 – Oct 2025</span>
+              </div>
+              <ul>
+                <li>Rate web pages/documents for topical relevance to queries and user intents.</li>
+                <li>Score trustworthiness, authority, bias, helpfulness, and freshness; flag low-quality content.</li>
+                <li>Provide structured rationales supporting ranking decisions in retrieval systems.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Independent Contractor — STEM with Python (Remote)</h3>
+                <span class="meta">Sep 2025 – Nov 2025</span>
+              </div>
+              <ul>
+                <li>Design computationally intensive prompts in math/physics/ML/data science requiring Python solutions.</li>
+                <li>Implement solution code and parallel human-readable reasoning aligned with program logic.</li>
+                <li>Define evaluation criteria focusing on determinism, numerical precision, and reproducibility.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>AI Prompt Engineer & Evaluator — Outlier.ai (Remote)</h3>
+                <span class="meta">2022 – 2024</span>
+              </div>
+              <ul>
+                <li>Create/refine prompts for STEM and reasoning; build evaluation tasks and rubrics.</li>
+                <li>Verification and annotation to improve safety, alignment, and reliability.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Freelance Mathematics Expert — Photomath (Remote)</h3>
+                <span class="meta">2020 – 2024</span>
+              </div>
+              <ul>
+                <li>Solve/review high volumes of math problems with step-by-step clarity and correctness.</li>
+                <li>Support educational datasets for AI-driven learning apps.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>Mathematics Tutor — Preply (Remote)</h3>
+                <span class="meta">2025 – Present</span>
+              </div>
+              <ul>
+                <li>Personalized online tutoring across school and university-level mathematics.</li>
+                <li>Strengthen exam technique, conceptual understanding, and problem-solving habits.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <h3>E-commerce & Dropshipping Operator — Self-Employed (Remote)</h3>
+                <span class="meta">2023 – 2024</span>
+              </div>
+              <ul>
+                <li>Product research (demand/competition/margin), listing optimization, and basic operations.</li>
+                <li>Order processing, returns coordination, and inventory tracking with suppliers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="education" class="card" aria-label="Education">
+      <div class="section-title">
+        <h2>Education</h2>
+        <span>Academic foundation</span>
+      </div>
+      <div class="section-body split">
+        <div class="item">
+          <div class="item-top">
+            <h3>Masters in Mathematics — NUST</h3>
+            <span class="meta">2022 – 2024 • CGPA: 3.61</span>
+          </div>
+          <p class="meta" style="margin-top:8px; color:rgba(229,231,235,.92)">
+            Thesis: Designed and simulated integrated lateral and longitudinal control systems for an autonomous electric vehicle.
+            Built MATLAB/Simulink vehicle dynamics models and tuned controllers; implemented real-time logic in C++ for trajectory
+            tracking and safety constraints; evaluated robustness under varying road conditions and disturbances.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <h3>Bachelors in Electrical Engineering — NUST</h3>
+            <span class="meta">2018 – 2022 • CGPA: 3.46</span>
+          </div>
+          <ul>
+            <li>Machine Learning: Intro to ML; Neural Networks & Pattern Recognition</li>
+            <li>EE: Circuit Analysis; Signals & Systems; Power Systems</li>
+            <li>Math: Calculus I–III; Linear Algebra; Differential Equations; Probability & Statistics; Numerical Methods</li>
+            <li>CS: Programming Fundamentals (C++); Data Structures & Algorithms; OOP</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card" aria-label="Highlights and strengths">
+      <div class="section-title">
+        <h2>Highlights</h2>
+        <span>What you can point to</span>
+      </div>
+      <div class="section-body">
+        <div class="timeline">
+          <div class="item">
+            <div class="item-top">
+              <h3>Multi-modal AI Evaluation</h3>
+              <span class="meta">Text • image • audio • video</span>
+            </div>
+            <ul>
+              <li>Consistent rubric application for quality, safety, and alignment across modalities.</li>
+              <li>Structured rationales that help improve ranking, preference models, and training outcomes.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <h3>Multilingual Urdu/Sindhi Workflow</h3>
+              <span class="meta">Script + transliteration</span>
+            </div>
+            <ul>
+              <li>Native-script vs Latin transliteration checks: phonological match, spelling correctness, contextual fit.</li>
+              <li>Culturally grounded prompting for realistic Pakistani scenarios.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <h3>STEM Prompt Design (Python)</h3>
+              <span class="meta">Determinism • precision • reproducibility</span>
+            </div>
+            <ul>
+              <li>Computational tasks that cannot be solved manually, with strict constraints and evaluation criteria.</li>
+              <li>Clear step-by-step reasoning aligned with program logic for training use.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="meta" style="margin-top:12px;">
+          Tip: Add a <code class="kbd">/projects</code> folder later with short case studies (1 page each) and link them here.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="card" aria-label="Contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <span>Let’s work together</span>
+      </div>
+      <div class="section-body">
+        <p style="margin:0; color:rgba(229,231,235,.92)">
+          If you’d like to discuss AI evaluation, data annotation, multilingual prompting, or STEM prompt design, reach out:
+        </p>
+
+        <div class="contact-list" style="margin-top:12px">
+          <div class="item" style="padding:12px 14px">
+            <div class="item-top">
+              <h3 style="margin:0; font-size:13px;">Email</h3>
+              <span class="meta"><a href="mailto:za17787@gmail.com">za17787@gmail.com</a></span>
+            </div>
+          </div>
+
+          <div class="item" style="padding:12px 14px">
+            <div class="item-top">
+              <h3 style="margin:0; font-size:13px;">Phone</h3>
+              <span class="meta"><a href="tel:+923451246218">+92 345 124 6218</a></span>
+            </div>
+          </div>
+
+          <div class="item" style="padding:12px 14px">
+            <div class="item-top">
+              <h3 style="margin:0; font-size:13px;">LinkedIn</h3>
+              <span class="meta"><a href="https://linkedin.com/in/zeeshan-ali-9503741a0" target="_blank" rel="noreferrer">
+                linkedin.com/in/zeeshan-ali-9503741a0
+              </a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <p class="meta" style="margin:0">
+          GitHub Pages: after you upload this file, go to <b>Settings → Pages</b> and set <b>Branch: main</b>, <b>Folder: / (root)</b>.
+        </p>
+      </div>
+    </section>
+
+    <div class="card footer" role="contentinfo">
+      © <span id="year"></span> Zeeshan Ali • Built for GitHub Pages
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
